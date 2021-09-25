@@ -23,10 +23,87 @@
     <fieldset class="field">
         <div class="field"> 
             <label for="Tarefa"><strong>Tarefa:</strong></label>
-            <input type="text" tarefa="tarefa" id="tarefa" required>
+           <form>
+               <input type="text" tarefa="tarefa" id="tarefa" placeholder="Nova tarefa" required>
+                 <input type="button" name="Adicionar"
+                value='Adicionar'
+                onclick="addTask()"/>
+           </form>
         </div>
     </fieldset>
 
 </form>
 
+<div class="row">
+    <div class="col-12">
+    <div class="lista">
+        <ul id="lista">
+            
+        </ul>
+    </div>
+    </div>
+</div>
+
+<!---
+<script type="text/javascript">
+
+var ul = doc.getElementById("Lista");
+var li;
+var itemId;
+var item;
+
+addTask = function(){
+
+}
+
+    if (doc.getEleById("Task").value != "")
+    {
+        item = doc.getEleById("Task");
+
+        itemId = ul.childElementCout;
+
+        li = createItemEl (item.value, itemId);
+        li.appendChild(createRemoveTaskBtn(intemId));
+        ul.appendChild(li);
+        item.value = "";
+    }
+
+
+
+    removeTask = function(itemId){
+        for(i = 0; i < ul.children.lenght; i++)
+        if(ul.children[i].getAttribute("index") == itemId)
+        {
+            ul.children[i].remove();
+        }
+    }
+    
+
+    
+
+
+
+createItemEl = function(intemValue, itemId)
+{
+    let li = doc.createElement("li");
+
+    li.setAttribute("index",itemId);
+
+    li.appendChild(document.createTextNode(itemValue));
+
+    return li;
+}
+
+createRemoveTaskBtn = function(intemId)
+{
+    let btn = document.createElement("button");
+    btn.setAttribute("onclick", "removeTask("+itemId+")");
+    btn.innerHTML = " X ";
+    return btn;
+}
+
+
+
+</script>
+-->
 </body>
